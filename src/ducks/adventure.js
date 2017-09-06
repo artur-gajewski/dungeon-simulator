@@ -1,3 +1,5 @@
+import { browserHistory } from 'react-router'
+
 export default(state = {}, payload) => {
     switch (payload.type) {
         case 'receive_adventure':
@@ -15,8 +17,8 @@ export function receiveAdventure(adventure) {
 }
 
 export function setAdventure(adventure) {
-    console.log("OK");
     return function(dispatch, getState) {
         dispatch(receiveAdventure(adventure));
+        browserHistory.push('/');
     };
 };
