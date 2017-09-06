@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import * as adventureActions from '../ducks/index';
+import * as adventureActions from '../ducks/adventure';
 import Main from '../components/Main'
 
 export default connect(
