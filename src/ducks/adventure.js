@@ -7,7 +7,7 @@ export default(state = {}, payload) => {
     }
 };
 
-function receiveAdventure(adventure) {
+export function receiveAdventure(adventure) {
     return {
         type: 'receive_adventure',
         adventure
