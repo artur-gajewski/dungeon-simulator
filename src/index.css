@@ -214,6 +214,18 @@ article > p {
     display: inline-block;
 }
 
+.game > button {
+    background-color: #1caadd;
+    border: none;
+    color: white;
+    margin-top: 1.2rem;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+}
+
 /* MOBILE MENU */
 @media screen and (max-width: 550px) {
 

@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import Navigation from '../components/Navigation';
 
 class Home extends Component {
-
     render() {
         return (
             <div>
+                <Navigation />
+
                 <div className="hero-small">News</div>
                 <div id="main-content">
                     <article>

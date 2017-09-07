@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 class Navigation extends Component {
-
-    toggleMobileMenu() {
-      const navUl = document.getElementsByClassName("nav-ul");
-      navUl[0].style.transition = "max-height 0.5s";
-      navUl[0].classList.toggle("hide-ul");
-    }
-
     render() {
         return (
             <div id="nav-background">
@@ -25,13 +18,19 @@ class Navigation extends Component {
                           <Link className="nav-link" to="/news">News</Link>
                         </li>
                         <li>
-                          <Link className="nav-link" to="/adventures">Adventures</Link>
+                          <Link className="nav-link" to="/list">Adventures</Link>
                         </li>
                       </ul>
                     </nav>
                 </div>
             </div>
         );
+    }
+
+    toggleMobileMenu() {
+      const navUl = document.getElementsByClassName("nav-ul");
+      navUl[0].style.transition = "max-height 0.5s";
+      navUl[0].classList.toggle("hide-ul");
     }
 }
 

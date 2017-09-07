@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
 import Navigation from '../components/Navigation';
+import Adventures from '../components/Adventures';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as adventureActions from '../ducks/adventure';
 
-import './Main.css';
-
-class Main extends Component {
+class AdventureList extends Component {
     render() {
-
-        console.log("Props:");
-        console.log(this.props);
-
         return (
             <div>
                 <Navigation />
-                {React.cloneElement(this.props.children, {...this.props})}
+                <Adventures adventureActions={this.props.adventureActions}/>
             </div>
         );
     }
@@ -23,7 +18,8 @@ class Main extends Component {
 
 function mapStateToProps(state) {
     return {
-        cart: state.cart,
+        data: state.adventure.data,
+        progress: state.adventure.progress,
     };
 }
 
@@ -33,6 +29,6 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(AdventureList);
 
 //export default Main;

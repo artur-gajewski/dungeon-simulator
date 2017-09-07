@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import TheGoblinHideout from '../adventures/theGoblinHideout';
 
 class Adventures extends Component {
-
     constructor(props) {
         super(props);
         this.onSetAdventure = this.onSetAdventure.bind(this);
