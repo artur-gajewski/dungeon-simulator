@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import TheGoblinHideout from '../adventures/theGoblinHideout';
+import TheGoblinHideout from '../database/adventures/theGoblinHideout';
 
 class Adventures extends Component {
-
     constructor(props) {
         super(props);
-        console.log(props);
         this.onSetAdventure = this.onSetAdventure.bind(this);
     }
 
@@ -24,6 +22,9 @@ class Adventures extends Component {
                             <h4>{ TheGoblinHideout['author'] }</h4>
                             <p>
                               { TheGoblinHideout['description'] }
+                            </p>
+                            <p>
+                              { TheGoblinHideout['levelDescription'] }
                             </p>
                             <button onClick={() =>
                                 this.onSetAdventure(TheGoblinHideout)}>

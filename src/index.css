@@ -174,7 +174,7 @@ body {
 }
 
 article > h2 {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   margin-top: 1rem;
 }
 
@@ -212,6 +212,62 @@ article > p {
     text-decoration: none;
     font-size: 1rem;
     display: inline-block;
+}
+
+.game-description > p {
+  margin-top: 1rem;
+}
+
+.game {
+    margin-top: 2rem;
+}
+
+.game > h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.game > p {
+    margin-top: 1em;
+}
+
+.game > button {
+    background-color: #1caadd;
+    border: none;
+    color: white;
+    margin-top: 2rem;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.npc-description > p {
+  margin-top: 1rem;
+}
+.npc-stats {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 100%;
+    max-width: 500px;
+}
+
+.npc-stats h4 {
+    font-size: 1.3rem;
+}
+
+.npc-stats ul {
+    list-style: none;
+}
+
+.npc-stats .statistics {
+    width: 100%;
+    padding-right: 0.5em;
+}
+
+.npc-stats .statistics td {
+    text-align: center;
 }
 
 /* MOBILE MENU */
