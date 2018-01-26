@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TheGoblinHideout from '../database/adventures/theGoblinHideout';
+import FontAwesome from 'react-fontawesome';
 
 class Adventures extends Component {
     constructor(props) {
@@ -28,7 +29,7 @@ class Adventures extends Component {
                             </p>
                             <button onClick={() =>
                                 this.onSetAdventure(TheGoblinHideout)}>
-                                Start this adventure
+                                <FontAwesome name='sign-in' /> Start this adventure
                             </button>
                         </div>
                     </article>

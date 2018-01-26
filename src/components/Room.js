@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import FontAwesome from 'react-fontawesome';
 import Navigation from '../components/Navigation';
 import Npc from './Npc';
+import Trap from './Trap';
 
 class Room extends Component {
     render() {
@@ -11,7 +13,7 @@ class Room extends Component {
           nextButton = (
             <button onClick={() =>
                 this.props.onGoForward()}>
-                {room.buttonText}
+                <FontAwesome name='thumbs-o-up' /> {room.buttonText}
             </button>
           );
         }
@@ -30,6 +32,10 @@ class Room extends Component {
                                     return <p key={index}>{description}</p>;
                                 }
                             )}
+                            
+                            {room.trap &&
+                                <Trap trap={room.trap}/>
+                            }
                             
                             {room.npc &&
                                 <Npc npc={room.npc}/>

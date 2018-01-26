@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Roll from './Roll';
+import Attack from './Attack';
 
 class Npc extends Component {
     render() {
@@ -68,26 +69,26 @@ class Npc extends Component {
                 </ul>
                 <hr />
                 <h3 id="actions">Actions</h3>
-                <p>
+                <div className="actions-melee">
                     <em>Melee Weapon Attack:</em>
                     <ul>
                     {npc.actions.melee.map(
-                        function(action, index){
-                            return <li key={index}>{action.description}, Attack: {action.toHit} to hit. Hit <Roll hp={action.hit} /></li>;
+                        function(action, index) {
+                            return <li key={index}>{action.description}, Attack: {action.toHit} to hit. <Attack type="melee" hp={action.hit} /></li>;
                         }
                     )}
                     </ul>
-                </p>
-                <p>
+                </div>
+                <div className="actions-range">
                     <em>Range Weapon Attack:</em>
                     <ul>
                     {npc.actions.range.map(
-                        function(action, index){
-                            return <li key={index}>{action.description}, Attack: {action.toHit} to hit. Hit <Roll hp={action.hit} /></li>;
+                        function(action, index) {
+                            return <li key={index}>{action.description}, Attack: {action.toHit} to hit. <Attack type="range" hp={action.hit} /></li>;
                         }
                     )}
                     </ul>
-                </p>
+                </div>
             </div>
         );
     }

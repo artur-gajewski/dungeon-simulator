@@ -29,13 +29,14 @@ export default {
           "You boldly step inside the cave and see yourself in a tunnel, which is dark and moist and you hear dripping sound echoing around. The air is getting colder and you feel a slight drift blowing into your neck."
       ],
       "trap": {
-        "description": "A trip wire is couple inches off the ground, set up to a netting below the cobwebs.",
-        "sc": "PERCEPTION CHECK",
-        "dc": 11,
+        "description": "There is a trip wire couple inches off the ground just in front of you.",
+        "notice": {"description": "PERCEPTION", "dc": 11},
+        "disarm": {"description": "SLIGHT OF HAND", "dc": 15},
+        "outcome": "In this case, you feel a sting in your back as a dart is shot from a mechanism to the left of you.",
         "hp": {
-          "text": "1d4",
-          "roll-amount": 1,
-          "roll-sides": 4
+          "rollAmount": 1,
+          "rollSides": 4,
+          "rollModifier": 0
         }
       },
       "buttonText": "I survived and wish to continue"
@@ -56,7 +57,6 @@ export default {
         "ac": 14,
         "challenge": {"cr": 1, "xp": "1/25"},
         "hp": {
-          "rollStatic": 5,
           "rollAmount": 1,
           "rollSides": 8,
           "rollModifier": 5
@@ -84,8 +84,7 @@ export default {
         ],
         "loot": [
           {
-            "type": "Hemp Rope",
-            "description": "a hemp rope (50ft)"
+            "description": "Hemp rope (50ft)"
           }
         ],
         "actions": {
@@ -94,10 +93,9 @@ export default {
               "description": "Short Sword",
               "toHit": "+2",
               "hit": {
-                "rollStatic": 2,
                 "rollAmount": 1,
                 "rollSides": 4,
-                "rollModifier": 0
+                "rollModifier": 3
               }
             }
           ],
@@ -106,10 +104,9 @@ export default {
               "description": "Short Bow",
               "toHit": "+3",
               "hit": {
-                "rollStatic": 3,
                 "rollAmount": 1,
                 "rollSides": 8,
-                "rollModifier": 0
+                "rollModifier": 2
               }
             }
           ]
